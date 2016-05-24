@@ -32,7 +32,7 @@ public class RootConfig {
         final LocalContainerEntityManagerFactoryBean factory =
                 new LocalContainerEntityManagerFactoryBean();
         factory.setPersistenceXmlLocation("classpath:/META-INF/persistence.xml");
-        factory.setPersistenceUnitName("bucoop_BuCoopApplication_war_1.0-SNAPSHOTPU");
+        factory.setPersistenceUnitName("bucoopdb");
         factory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         factory.setDataSource(this.springJpaDataSource());
         return factory;

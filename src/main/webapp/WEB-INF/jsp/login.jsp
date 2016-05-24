@@ -11,28 +11,24 @@
                 <div class="span12">
                     <div class="span6">
                         <div class="area">
-                            <form class="form-horizontal">
-                                <div class="heading">
-                                    <h4 class="form-heading">Sign In</h4>
+                            <form class="form-horizontal" method="post" role="form" action="/login">
+                                <div class="page-header">
+                                    <h1 class="form-heading">Login</h1>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for=
-                                    "inputUsername">E-Mail</label>
+                                    <label class="control-label" for="inputUsername">Username</label>
 
                                     <div class="controls">
-                                        <input id="inputUsername" placeholder=
-                                        "E.g. johndoe@domain.com" type="text">
+                                        <input id="inputUsername" placeholder="E.g. johndoe@domain.com" type="text" name="username">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for=
-                                    "inputPassword">Password</label>
+                                    <label class="control-label" for="inputPassword">Password</label>
 
                                     <div class="controls">
-                                        <input id="inputPassword" placeholder=
-                                        "********" type="password">
+                                        <input id="inputPassword" placeholder="********" type="password" name="password">
                                     </div>
                                 </div>
 
@@ -41,8 +37,7 @@
 <!--                                        <label class="checkbox"><input type="checkbox">
                                         Keep me signed in ¦ <a class="btn btn-link"
                                         href="#">Forgot my password</a></label>-->
-                                        <button class="btn btn-success" type=
-                                        "submit">Sign In</button>
+                                        <button class="btn btn-success" type="submit">Login</button>
                                     </div>
                                 </div>
 

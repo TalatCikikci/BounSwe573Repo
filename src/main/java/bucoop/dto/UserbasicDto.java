@@ -6,9 +6,9 @@ public interface UserbasicDto {
     
     void persistUserBasicInfo(Userbasic userBasic);
     
-    boolean userExistsWithMail(String username, String password);
+    boolean userExistsWithName(String username, String password);
 
-    Userbasic getAppUserWithMail(String username);
+    Userbasic getAppUserWithName(String username);
 
     Userbasic getAppUserWithId(long userId);
 

@@ -13,12 +13,12 @@ public class LoginUtilImpl implements LoginUtil {
     
     @Override
     public boolean logIn(String username, String password) {
-        return userBasicDto.userExistsWithMail(username, password);
+        return userBasicDto.userExistsWithName(username, password);
     }
 
     @Override
-    public Userbasic getAppUserWithMail(String username) {
-        return userBasicDto.getAppUserWithMail(username);
+    public Userbasic getAppUserWithName(String username) {
+        return userBasicDto.getAppUserWithName(username);
     }
     
 }

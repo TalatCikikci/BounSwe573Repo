@@ -30,6 +30,7 @@ public class SignupController {
     
     @RequestMapping(method = RequestMethod.POST, value = "")
     public String signUp(@RequestParam String username,
+                         @RequestParam String email,
                          @RequestParam String password,
                          Model model,
                          RedirectAttributes redirectAttributes,
@@ -37,21 +38,17 @@ public class SignupController {
         final boolean signUpAllowed
                 = signupUtil.checkSignUpAllowed(username, password);
 
-        if (!signUpAllowed) {
-            // TODO: Sign up not allowed..
-            // Show a meaningful message to the user.erhan
-        }
+//        if (!signUpAllowed) {
+//        }
 
         final boolean signUpSuccessful
-                = signupUtil.signUp(username, password);
+                = signupUtil.signUp(username, email, password);
 
-        if (!signUpSuccessful) {
-            // TODO: Sign up not allowed..
-            // Show a meaningful message to the user.
-        }
+//        if (!signUpSuccessful) {
+//        }
 
         final String successMessage = "Successfully signed up!";
-        final Userbasic userBasic = loginUtil.getAppUserWithMail(username);
+        final Userbasic userBasic = loginUtil.getAppUserWithName(username);
 
         httpServletRequest.getSession().setAttribute("sessionUser", username);
         httpServletRequest.getSession().setAttribute("sessionUserAsBean", userBasic);

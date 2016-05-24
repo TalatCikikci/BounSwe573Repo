@@ -6,11 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "/profile")
 public class ProfileController {
     
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String displayHome(Model model) {
+    @RequestMapping(value = "/profile", method = RequestMethod.GET)
+    public String displayProfile(Model model) {
+        return "profile";
+    }
+    
+    @RequestMapping(value = "/editprofile", method = RequestMethod.GET)
+    public String displayEditProfile(Model model) {
+        return "editprofile";
+    }
+    
+    @RequestMapping(value = "/editaction", method = RequestMethod.POST)
+    public String editProfile(Model model) {
         return "profile";
     }
 }

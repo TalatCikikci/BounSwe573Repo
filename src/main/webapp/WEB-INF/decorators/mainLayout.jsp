@@ -11,24 +11,6 @@
         <meta name="description" content="BuCoop - Food cooperation portal for Bogazici University" >
         <meta name="author" content="Talat Cikikci" >
 
-        <link rel="stylesheet" type="text/css" href="<c:url value="/resources/leaflet/leaflet.css"/>"/>
-        <link rel="stylesheet" type="text/css" href="<c:url value="/resources/leaflet.search/leaflet-search.min.css"/>"/>
-        <link rel="stylesheet" type="text/css" href="<c:url value="/resources/leaflet.draw/leaflet.draw.css"/>"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/Site.css"/>"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="<c:url value="/resources/js/transitions.js"/>"></script>
-        <script src="<c:url value="/resources/js/respond.js"/>"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.9/jquery.mask.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
-        <script src="<c:url value="/resources/leaflet/leaflet.js"/>"></script>
-        <script src="<c:url value="/resources/leaflet.search/leaflet-search.min.js"/>"></script>
-        <script src="<c:url value="/resources/leaflet.draw/leaflet.draw.js"/>"></script>
-        <script src="<c:url value="/resources/js/modernizr.js"/>"></script>
-        <script src="<c:url value="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"/>"></script>
-        <script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"/>"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
-
         <title>
             <dec:title default="mvc-java-init" />
         </title>
@@ -66,7 +48,12 @@
     
     <body>
         <%@include file="header.jsp"%>
-        <div id="message" class="alert alert-info">
+        <c:if test="${not empty successMessage}">
+            <div id="message" class="alert alert-info">
+                    ${successMessage}
+            </div>
+        </c:if>
+        <!--<div id="message" class="alert alert-info">-->
             
         </div>
  

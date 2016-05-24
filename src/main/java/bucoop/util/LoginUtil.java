@@ -6,6 +6,6 @@ public interface LoginUtil {
     
     boolean logIn(String username, String password);
 
-    Userbasic getAppUserWithMail(String username);
+    Userbasic getAppUserWithName(String username);
     
 }

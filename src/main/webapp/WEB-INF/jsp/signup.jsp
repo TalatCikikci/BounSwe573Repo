@@ -11,56 +11,47 @@
                 <div class="span12">
                     <div class="span6">
                         <div class="area">
-                            <form class="form-horizontal" method="post" role="form"
-                                                 action="/signup">
-        <div class="heading">
-                                    <h4 class="form-heading">Sign Up</h4>
+                            <form class="form-horizontal" method="post" role="form" action="/signup">
+                                
+                                <div class="page-header">
+                                    <h1 class="form-heading">Sign Up</h1>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for="username">Username
-                                    </label>
+                                    <label class="control-label" for="inputUsername">Username</label>
 
                                     <div class="controls">
-                                        <input id="username" placeholder=
-                                        "E.g. JohnDoe" type="text">
+                                        <input id="inputUsername" placeholder="E.g. JohnDoe" type="text" name="username">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for=
-                                    "inputEmail">E-Mail</label>
+                                    <label class="control-label" for="inputEmail">E-Mail</label>
 
                                     <div class="controls">
-                                        <input id="inputEmail" placeholder=
-                                        "E.g. johndoe@domain.com" type="text">
+                                        <input id="inputEmail" placeholder="E.g. johndoe@domain.com" type="text" name="email">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for=
-                                    "password">Password</label>
+                                    <label class="control-label" for="inputPassword">Password</label>
 
                                     <div class="controls">
-                                        <input id="password" placeholder=
-                                        "Min. 6 Characters" type="password">
+                                        <input id="inputPassword" placeholder="Min. 6 Characters" type="password" name="password">
                                     </div>
                                 </div>
                                 
-                                                                <div class="control-group">
-                                    <label class="control-label" for=
-                                    "inputPassword">Confirm Password</label>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputPassword2">Confirm Password</label>
 
                                     <div class="controls">
-                                        <input id="inputPassword" placeholder=
-                                        "Same as password" type="password">
+                                        <input id="inputPassword2" placeholder="Same as password" type="password">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <div class="controls"> <input class=
-                                        "btn btn-success" type="submit">Sign
-                                        Up</input>
+                                    <div class="controls"> <button class=
+                                        "btn btn-success" type="submit">Sign Up</button>
                                     </div>
                                 </div>
 
