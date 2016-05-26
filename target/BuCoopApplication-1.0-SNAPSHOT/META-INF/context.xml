@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="">
+  <Resource driverClassName="com.mysql.jdbc.Driver" maxActive="20" maxIdle="5" maxWait="10000" name="jdbc/bucoopdb" password="bucoopdb" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/bucoopdb?useUnicode=yes&amp;characterEncoding=UTF-8" username="bucoopdb"/>
+</Context>

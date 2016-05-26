@@ -35,9 +35,11 @@ public class LoginController {
         final boolean loginSuccessful
                 = loginUtil.logIn(username, password);
 
-//        if (!loginSuccessful) {
-//            // TODO: Login was not successful! We must inform the user!
-//        }
+        if (!loginSuccessful) {
+            final String successMessage = "Login failed!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/login";
+        }
 
         final String successMessage = "Successfully logged in!";
         final Userbasic userbasic = loginUtil.getAppUserWithName(username);
