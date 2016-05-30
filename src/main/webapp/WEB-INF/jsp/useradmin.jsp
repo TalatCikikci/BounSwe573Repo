@@ -82,7 +82,12 @@
                                             <tr>
                                                 <td><c:out value="${userList.id}"/></td>
                                                 <td><c:out value="${userList.username}"/></td>
-                                                <td><button class="close">&times;</button></td>
+                                                <td>
+                                                    <button class="close" title="Delete user.">&times;</button>
+                                                    <c:if test="${userList.isapplicant}">
+                                                    <button class="close" title="Approve user's membership request.">&#10003;</button>
+                                                    </c:if>
+                                                </td>
                                             </tr>
                                         </c:forEach>
                                     </tbody>

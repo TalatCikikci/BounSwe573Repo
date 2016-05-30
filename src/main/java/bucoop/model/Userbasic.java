@@ -32,7 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Userbasic.findByUsername", query = "SELECT u FROM Userbasic u WHERE u.username = :username"),
     @NamedQuery(name = "Userbasic.findByPassword", query = "SELECT u FROM Userbasic u WHERE u.password = :password"),
     @NamedQuery(name = "Userbasic.findByType", query = "SELECT u FROM Userbasic u WHERE u.type = :type"),
-    @NamedQuery(name = "Userbasic.findByActive", query = "SELECT u FROM Userbasic u WHERE u.active = :active")})
+    @NamedQuery(name = "Userbasic.findByActive", query = "SELECT u FROM Userbasic u WHERE u.active = :active"),
+    @NamedQuery(name = "Userbasic.findByIsapplicant", query = "SELECT u FROM Userbasic u WHERE u.isapplicant = :isapplicant")})
 public class Userbasic implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -59,6 +60,10 @@ public class Userbasic implements Serializable {
     @NotNull
     @Column(name = "active")
     private boolean active;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "isapplicant")
+    private boolean isapplicant;
 
     public Userbasic() {
     }
@@ -67,12 +72,13 @@ public class Userbasic implements Serializable {
         this.id = id;
     }
 
-    public Userbasic(Integer id, String username, String password, String type, boolean active) {
+    public Userbasic(Integer id, String username, String password, String type, boolean active, boolean isapplicant) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.type = type;
         this.active = active;
+        this.isapplicant = isapplicant;
     }
 
     public Integer getId() {
@@ -115,6 +121,15 @@ public class Userbasic implements Serializable {
         this.active = active;
     }
 
+    public boolean getIsapplicant() {
+        return isapplicant;
+    }
+
+    public void setIsapplicant(boolean isapplicant) {
+        this.isapplicant = isapplicant;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 0;
