@@ -107,4 +107,6 @@ CREATE TABLE `category` (
   `categoryname` VARCHAR(100) NOT NULL
 );
 
-INSERT INTO userbasic (username,password,type,active) VALUES ('superadmin','super123','superadmin',1);
+ALTER TABLE userbasic ADD COLUMN isApplicant BOOLEAN NOT NULL DEFAULT FALSE;
+
+INSERT INTO userbasic (username,password,type,active,isApplicant) VALUES ('superadmin','super123','superadmin',1,0);
