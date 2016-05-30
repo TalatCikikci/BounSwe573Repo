@@ -52,7 +52,7 @@ public class UserbasicDtoImpl implements UserbasicDto {
     }
 
     @Override
-    public Userbasic getAppUserWithId(long userId) {
+    public Userbasic getAppUserWithId(Integer userId) {
         final Userbasic userBasic = entityManager.find(Userbasic.class, userId);
         if (userBasic == null) {
             return null;
@@ -66,6 +66,13 @@ public class UserbasicDtoImpl implements UserbasicDto {
         final Userbasic userBasic = getAppUserWithName(username);
         entityManager.merge(userBasic);
         userBasic.setType(userType);
+        entityManager.flush();
+    }
+   
+    @Override
+    @Transactional
+    public void updateUserBasic(Userbasic userBasic) {
+        entityManager.merge(userBasic);
         entityManager.flush();
     }
 }

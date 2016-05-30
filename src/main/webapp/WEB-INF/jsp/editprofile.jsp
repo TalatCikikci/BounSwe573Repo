@@ -14,7 +14,7 @@
                             <form class="form-horizontal" method="post" role="form" action="${pageContext.servletContext.contextPath}/editaction">
                                 
                                 <div class="page-header">
-                                    <h1 class="form-heading">Profile Page of ${sessionUser}</h1>
+                                    <h1 class="form-heading">Edit Profile Page of ${sessionUser}</h1>
                                 </div>
 
                                 <div class="control-group">
@@ -24,28 +24,22 @@
 
                                     <div class="controls">
                                         <input id="profileFirstName" type="text" name="firstname">
-                                    </div>
-                                                               
-                                    <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="profileVisible">
+                                            <input type="checkbox" name="firstnameVisible">
                                             Private?
                                         </label>
                                     </div>
                                 </div>
                                     
                                 <div class="control-group">
-                                    <label class="control-label" for="profileLastName">
+                                    <label class="control-label" for="profileSurname">
                                         Last Name
                                     </label>
 
                                     <div class="controls">
-                                        <input id="profileLastName" type="text" name="lastname">
-                                    </div>
-                                    
-                                    <div class="controls">
+                                        <input id="profileSurname" type="text" name="surname">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="profileVisible">
+                                            <input type="checkbox" name="surnameVisible">
                                             Private?
                                         </label>
                                     </div>
@@ -58,11 +52,8 @@
 
                                     <div class="controls">
                                         <input id="profileEmail" type="text" name="email">
-                                    </div>
-                                                                        
-                                    <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="profileVisible">
+                                            <input type="checkbox" name="emailVisible">
                                             Private?
                                         </label>
                                     </div>
@@ -75,7 +66,11 @@
 
                                     <div class="controls">
                                         <textarea id="profileAbout" rows="5" type="text" name="about"></textarea>
-                                    </div
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="aboutVisible">
+                                            Private?
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div class="control-group">

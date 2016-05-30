@@ -15,16 +15,23 @@ public class UserprivacyDtoImpl implements UserprivacyDto {
 
     @Override
     @Transactional
-    public void persistUserAdditionalInfo(Userprivacy userPrivacy) {
+    public void persistUserPrivacyInfo(Userprivacy userPrivacy) {
         entityManager.persist(userPrivacy);
     }
     
     @Override
-    public Userprivacy getUserAdditionalWithId(long userId) {
+    public Userprivacy getUserPrivacyWithId(Integer userId) {
         final Userprivacy userPrivacy = entityManager.find(Userprivacy.class, userId);
         if (userPrivacy == null) {
             return null;
         }
         return userPrivacy;
+    }
+    
+    @Override
+    @Transactional
+    public void updateUserPrivacy(Userprivacy userPrivacy) {
+        entityManager.merge(userPrivacy);
+        entityManager.flush();
     }
 }

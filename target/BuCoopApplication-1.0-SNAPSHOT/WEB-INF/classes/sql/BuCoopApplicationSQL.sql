@@ -100,4 +100,11 @@ CREATE TABLE `memberrequest` (
   `requesterid` INT(10)
 );
 
+DROP TABLE IF EXISTS `category`;
+
+CREATE TABLE `category` (
+  `id` INT(10) PRIMARY KEY AUTO_INCREMENT,
+  `categoryname` VARCHAR(100) NOT NULL
+);
+
 INSERT INTO userbasic (username,password,type,active) VALUES ('superadmin','super123','superadmin',1);

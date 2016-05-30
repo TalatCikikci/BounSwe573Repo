@@ -5,7 +5,9 @@ import bucoop.model.Userprivacy;
 
 public interface UserprivacyDto {
     
-    void persistUserAdditionalInfo(Userprivacy userAdditional);
+    void persistUserPrivacyInfo(Userprivacy userAdditional);
     
-    Userprivacy getUserAdditionalWithId(long userId);
+    Userprivacy getUserPrivacyWithId(Integer userId);
+    
+    void updateUserPrivacy(Userprivacy userPrivacy);
 }

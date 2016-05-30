@@ -12,6 +12,7 @@
     <class>bucoop.model.Producer</class>
     <class>bucoop.model.Product</class>
     <class>bucoop.model.Memberrequest</class>
+    <class>bucoop.model.Category</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bucoopdb"/>

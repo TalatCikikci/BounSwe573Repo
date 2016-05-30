@@ -35,6 +35,12 @@
                                         <li>
                                         <a href="<c:url value="/addproduct" />">Add Products</a>
                                         </li>
+                                        <li>
+                                        <a href="<c:url value="/categoryadmin" />">List Categories</a>
+                                        </li>   
+                                        <li>
+                                        <a href="<c:url value="/addcategory" />">Add Categories</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu"><a tabindex="-1" href="<c:url value="/produceradmin" />">Producers</a>

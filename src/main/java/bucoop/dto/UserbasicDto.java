@@ -10,7 +10,9 @@ public interface UserbasicDto {
 
     Userbasic getAppUserWithName(String username);
 
-    Userbasic getAppUserWithId(long userId);
+    Userbasic getAppUserWithId(Integer userId);
 
     void setType(String username , String userType);
+    
+    void updateUserBasic(Userbasic userBasic);
 }

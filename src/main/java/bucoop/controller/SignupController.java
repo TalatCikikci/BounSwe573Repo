@@ -38,14 +38,20 @@ public class SignupController {
         final boolean signUpAllowed
                 = signupUtil.checkSignUpAllowed(username, password);
 
-//        if (!signUpAllowed) {
-//        }
+        if (!signUpAllowed) {
+            final String successMessage = "Username and password fields cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:signup";
+        }
 
         final boolean signUpSuccessful
                 = signupUtil.signUp(username, email, password);
 
-//        if (!signUpSuccessful) {
-//        }
+        if (!signUpSuccessful) {
+            final String successMessage = "Something went wrong while signing up!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:signup";
+        }
 
         final String successMessage = "Successfully signed up!";
         final Userbasic userBasic = loginUtil.getAppUserWithName(username);

@@ -18,9 +18,11 @@ bucoop\model\Useradditional.class
 bucoop\dto\UserprivacyDto.class
 bucoop\controller\ProductController.class
 bucoop\dto\AnnouncementDto.class
+bucoop\dto\CategoryDto.class
 bucoop\util\LoginUtilImpl.class
 bucoop\model\Userprivacy_.class
 bucoop\dto\UseradditionalDto.class
+bucoop\model\Category.class
 bucoop\dto\UserbasicDto.class
 bucoop\model\Memberrequest_.class
 bucoop\dto\InventoryDto.class
@@ -29,10 +31,14 @@ bucoop\model\Product_.class
 bucoop\model\Useradditional_.class
 bucoop\dto\TagDtoImpl.class
 bucoop\model\Commentrate_.class
+bucoop\util\ProductUtil.class
 bucoop\model\Announcement.class
 bucoop\dto\ProducerDtoImpl.class
 bucoop\conf\RootConfig.class
 bucoop\model\Commentrate.class
+bucoop\dto\CategoryDtoImpl.class
+bucoop\util\ProductUtilImpl.class
+bucoop\model\Category_.class
 bucoop\conf\WebConfig.class
 bucoop\util\LoginUtil.class
 bucoop\util\ProfileUtilImpl.class

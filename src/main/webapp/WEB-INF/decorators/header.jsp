@@ -16,7 +16,7 @@
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right">
                             <c:if test="${not empty sessionUser}">
-                                Logged in as <a href="${pageContext.servletContext.contextPath}/profile" class="navbar-link"><c:out value="${sessionUser}"/></a>
+                                Logged in as <a href="${pageContext.servletContext.contextPath}/profile" class="navbar-link"><c:out value="${sessionUser}"/></a> | <a href="<c:url value="/login/logout" />">Log Out</a>
                             </c:if>
                         </p>
                         <ul class="nav">

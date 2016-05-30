@@ -41,16 +41,36 @@ public class LoginController {
             return "redirect:/login";
         }
 
-        final String successMessage = "Successfully logged in!";
         final Userbasic userbasic = loginUtil.getAppUserWithName(username);
-
+        final Integer userId = userbasic.getId();
+        final String userType = userbasic.getType();
+        final boolean userActive = userbasic.getActive();
+        
+        if (userActive == false) {
+            final String successMessage = "User has been banned!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/login";
+        }
+            
+        final String successMessage = "Successfully logged in!";
+        
         redirectAttributes.addFlashAttribute("successMessage", successMessage);
         redirectAttributes.addFlashAttribute("sessionUser", username);
         redirectAttributes.addFlashAttribute("sessionUserAsBean", userbasic);
 
         httpServletRequest.getSession().setAttribute("sessionUser", username);
         httpServletRequest.getSession().setAttribute("sessionUserAsBean", userbasic);
+        httpServletRequest.getSession().setAttribute("sessionUserId", userId);
+        httpServletRequest.getSession().setAttribute("sessionUserType", userType);
 
+        return "redirect:/";
+    }
+    
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpServletRequest httpServletRequest,
+                         RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("successMessage", "Logged out!");
+        httpServletRequest.getSession().invalidate();
         return "redirect:/";
     }
 }
