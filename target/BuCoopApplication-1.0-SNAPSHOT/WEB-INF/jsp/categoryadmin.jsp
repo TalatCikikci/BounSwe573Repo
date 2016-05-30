@@ -70,7 +70,7 @@
                         <div class="area">
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered table-striped">
-                                  <thead>
+                                  <thead class="thead-inverse">
                                         <tr>
                                             <th>ID</th>
                                             <th>Category Name</th>
@@ -78,13 +78,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                            <c:forEach items="${categoryList}" var="categoryList">
-                                                <tr>
-                                                    <td><c:out value="${categoryList.id}"/></td>
-                                                    <td><c:out value="${categoryList.categoryname}"/></td>
-                                                    <td><button class="close">&times;</button></td>
-                                                </tr>
-                                            </c:forEach>
+                                        <c:forEach items="${categoryList}" var="categoryList">
+                                            <tr>
+                                                <td><c:out value="${categoryList.id}"/></td>
+                                                <td><c:out value="${categoryList.categoryname}"/></td>
+                                                <td><button class="close">&times;</button></td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

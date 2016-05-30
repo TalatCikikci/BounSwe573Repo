@@ -69,7 +69,7 @@
                     <div class="span6">
                         <div class="area">
                             <div class="table-responsive">
-                                <table class="table-hover table-bordered">
+                                <table class="table table-hover table-bordered table-striped">
                                   <thead>
                                         <tr>
                                             <th>ID</th>

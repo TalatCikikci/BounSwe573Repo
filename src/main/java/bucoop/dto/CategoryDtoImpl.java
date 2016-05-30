@@ -32,7 +32,7 @@ public class CategoryDtoImpl implements CategoryDto{
     
     @Override
     public List<Category> getCategories() {
-        final List categoriesOrdered = entityManager.createQuery("SELECT h FROM Category h ORDER BY h.id DESC").getResultList();
+        final List categoriesOrdered = entityManager.createQuery("SELECT h FROM Category h ORDER BY h.id ASC").getResultList();
         return categoriesOrdered;
     }
 

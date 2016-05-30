@@ -34,7 +34,6 @@ public class ProductUtilImpl implements ProductUtil{
         return true;
     }
     
-    
     @Override
     public List<Category> getCategoryList(){
         final List<Category> categoryCollection = categoryDto.getCategoryList();

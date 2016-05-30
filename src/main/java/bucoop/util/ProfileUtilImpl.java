@@ -7,6 +7,7 @@ import bucoop.model.Userprivacy;
 import bucoop.dto.UserprivacyDto;
 import bucoop.dto.UseradditionalDto;
 import bucoop.model.Useradditional;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,5 +60,11 @@ public class ProfileUtilImpl implements ProfileUtil {
 
         userPrivacyDto.updateUserPrivacy(userPrivacy);
         return true;
+    }
+    
+    @Override
+    public List<Userbasic> getBasicUsersList(){
+        final List<Userbasic> categoryCollection = userBasicDto.getBasicUsersList();
+        return categoryCollection;
     }
 }

@@ -2,7 +2,9 @@ package bucoop.controller;
 
 import bucoop.dto.CategoryDto;
 import bucoop.model.Category;
+import bucoop.model.Userbasic;
 import bucoop.util.ProductUtil;
+import bucoop.util.ProfileUtil;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,7 @@ public class AdminConsoleController {
     private ProductUtil productUtil;
     
     @Autowired
-    private CategoryDto categoryDto;
+    private ProfileUtil profileUtil;
     
     @RequestMapping(value = "/adminconsole", method = RequestMethod.GET)
     public String displayConsole(Model model) {
@@ -29,7 +31,9 @@ public class AdminConsoleController {
     }
     
     @RequestMapping(value = "/useradmin", method = RequestMethod.GET)
-    public String displayUseradmin(Model model) {
+    public String displayUseradmin(HttpServletRequest httpServletRequest) {
+        final List<Userbasic> userList = profileUtil.getBasicUsersList();
+        httpServletRequest.getSession().setAttribute("userList", userList);
         return "useradmin";
     }
     

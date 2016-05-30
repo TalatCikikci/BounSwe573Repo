@@ -3,6 +3,7 @@ package bucoop.util;
 import bucoop.model.Useradditional;
 import bucoop.model.Userbasic;
 import bucoop.model.Userprivacy;
+import java.util.List;
 
 public interface ProfileUtil {
     
@@ -15,5 +16,7 @@ public interface ProfileUtil {
     Useradditional getProfileAdditionalById(Integer userID);
     
     Userprivacy getProfilePrivacyById(Integer userID);
+    
+    List<Userbasic> getBasicUsersList();
     
 }

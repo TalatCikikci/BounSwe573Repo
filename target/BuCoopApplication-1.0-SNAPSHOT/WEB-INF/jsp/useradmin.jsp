@@ -69,34 +69,22 @@
                     <div class="span6">
                         <div class="area">
                             <div class="table-responsive">
-                                <table class="table-hover table-bordered">
+                                <table class="table table-hover table-bordered table-striped">
                                   <thead>
                                         <tr>
                                             <th>ID</th>
                                             <th>Username</th>
-                                            <th>User Mail</th>
                                             <th>Operations</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mary</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                            <td></td>
-                                        </tr>
+                                        <c:forEach items="${userList}" var="userList">
+                                            <tr>
+                                                <td><c:out value="${userList.id}"/></td>
+                                                <td><c:out value="${userList.username}"/></td>
+                                                <td><button class="close">&times;</button></td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

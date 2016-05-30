@@ -1,6 +1,7 @@
 package bucoop.dto;
 
 import bucoop.model.Userbasic;
+import java.util.List;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -74,5 +75,17 @@ public class UserbasicDtoImpl implements UserbasicDto {
     public void updateUserBasic(Userbasic userBasic) {
         entityManager.merge(userBasic);
         entityManager.flush();
+    }
+    
+    @Override
+    public List<Userbasic> getBasicUsers() {
+        final List userBasicOrdered = entityManager.createQuery("SELECT h FROM Userbasic h ORDER BY h.id ASC").getResultList();
+        return userBasicOrdered;
+    }
+    
+    @Override
+    public List<Userbasic> getBasicUsersList() {
+        final List<Userbasic> basicUsersList = getBasicUsers();
+        return basicUsersList;
     }
 }
