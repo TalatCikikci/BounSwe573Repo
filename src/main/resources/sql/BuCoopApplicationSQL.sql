@@ -108,3 +108,5 @@ CREATE TABLE `category` (
 );
 
 INSERT INTO userbasic (username,password,type,active) VALUES ('superadmin','super123','superadmin',1);
+
+CREATE VIEW userall AS (SELECT a.id, a.username, a.password, a.type, a.active, a.isapplicant, b.email, b.firstname, b.surname, b.avatar, b.about, c.emailpriv, c.firstnamepriv, c.surnamepriv, c.avatarpriv, c.aboutpriv FROM userbasic a INNER JOIN useradditional b ON a.id=b.id INNER JOIN userprivacy c ON b.id=c.id);
