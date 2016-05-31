@@ -6,8 +6,10 @@ bucoop\dto\UserprivacyDtoImpl.class
 bucoop\util\SignupUtil.class
 bucoop\controller\HomeController.class
 bucoop\conf\SpringBoot.class
+bucoop\util\ProducerUtil.class
 bucoop\model\Userbasic.class
 bucoop\controller\SignupController.class
+bucoop\dto\ProductDto.class
 bucoop\model\Memberrequest.class
 bucoop\model\Userbasic_.class
 bucoop\model\Announcement_.class
@@ -20,6 +22,7 @@ bucoop\controller\ProductController.class
 bucoop\dto\AnnouncementDto.class
 bucoop\dto\CategoryDto.class
 bucoop\util\LoginUtilImpl.class
+bucoop\util\AnnouncementUtil.class
 bucoop\model\Userprivacy_.class
 bucoop\dto\UseradditionalDto.class
 bucoop\model\Category.class
@@ -38,14 +41,17 @@ bucoop\conf\RootConfig.class
 bucoop\model\Commentrate.class
 bucoop\dto\CategoryDtoImpl.class
 bucoop\util\ProductUtilImpl.class
+bucoop\util\AnnouncementUtilImpl.class
 bucoop\model\Category_.class
 bucoop\conf\WebConfig.class
 bucoop\util\LoginUtil.class
 bucoop\util\ProfileUtilImpl.class
 bucoop\dto\AnnouncementDtoImpl.class
+bucoop\dto\ProductDtoImpl.class
 bucoop\model\Producer.class
 bucoop\dto\MemberrequestDto.class
 bucoop\dto\TagDto.class
+bucoop\util\ProducerUtilImpl.class
 bucoop\util\ProfileUtil.class
 bucoop\util\SignupUtilImpl.class
 bucoop\dto\UserbasicDtoImpl.class

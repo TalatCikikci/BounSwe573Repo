@@ -7,10 +7,13 @@ C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\Prod
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Announcement.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\InventoryDtoImpl.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\UserbasicDto.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\ProductDto.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Category.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Userbasic.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\CategoryDtoImpl.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\ProductDtoImpl.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\ProducerDtoImpl.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\AnnouncementUtilImpl.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\ProducerDto.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Producer.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\conf\RootConfig.java
@@ -19,6 +22,7 @@ C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\TagDt
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\controller\ProfileController.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\CommentrateDto.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\ProductUtil.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\AnnouncementUtil.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\CategoryDto.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\controller\CheckoutRegisterController.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\UserprivacyDtoImpl.java
@@ -28,6 +32,8 @@ C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\Userb
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Inventory.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Memberrequest.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\controller\LoginController.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\ProducerUtilImpl.java
+C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\ProducerUtil.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\util\ProfileUtil.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\model\Useradditional.java
 C:\Users\Z003J14C\Documents\GitHub\BounSwe573Repo\src\main\java\bucoop\dto\MemberrequestDtoImpl.java

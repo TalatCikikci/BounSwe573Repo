@@ -53,13 +53,13 @@
                                         </li>
                                     </ul>                    
                                 </li>
-                                <li class="dropdown-submenu"><a tabindex="-1" href="<c:url value="/announcementadmin" />">Announcements</a>
+                                <li class="dropdown-submenu"><a tabindex="-1" href="<c:url value="/productadmin" />">Announcements</a>
                                     <ul class="well dropdown-menu">
                                         <li>
-                                        <a href="<c:url value="/announcementadmin" />">List Announcements</a>
+                                        <a href="<c:url value="/productadmin" />">List Announcements</a>
                                         </li>
                                         <li>
-                                        <a href="<c:url value="/addannouncement" />">Add Announcements</a>
+                                        <a href="<c:url value="/addproduct" />">Add Announcements</a>
                                         </li>
                                     </ul>                    
                                 </li>
@@ -74,37 +74,21 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Product Name</th>
-                                            <th>Quantity</th>
                                             <th>Category</th>
                                             <th>Producer</th>
                                             <th>Operations</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>İzmir Tulum</td>
-                                            <td>10kg</td>
-                                            <td>Peynir</td>
-                                            <td>Mehmet Aga</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Kars Gravyer</td>
-                                            <td>5kg</td>
-                                            <td>Peynir</td>
-                                            <td>Ayşe Teyze</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Köy Yumurtası</td>
-                                            <td>2kg</td>
-                                            <td>Yumurta</td>
-                                            <td>Keskinoğlu</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
+                                        <c:forEach items="${productList}" var="productList">
+                                            <tr>
+                                                <td><c:out value="${productList.id}"/></td>
+                                                <td><c:out value="${productList.productname}"/></td>
+                                                <td><c:out value="${productList.category}"/></td>
+                                                <td><c:out value="${productList.producer}"/></td>
+                                                <td><button class="close">&times;</button></td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

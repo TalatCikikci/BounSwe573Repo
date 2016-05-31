@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bucoop.dto;
 
-/**
- *
- * @author z003j14c
- */
+import bucoop.model.Announcement;
+import java.util.List;
+
+
 public interface AnnouncementDto {
+    
+    public void persistAnnouncement(Announcement announcement);
+    
+    public Announcement getAnnouncementWithId(Integer announcementId);
+    
+    public List<Announcement> getAnnouncements();
+    
+    public List<Announcement> getAnnouncementList();
     
 }

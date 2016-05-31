@@ -82,7 +82,7 @@
                                     <label class="control-label" for="inputDesc">About</label>
 
                                     <div class="controls">
-                                        <textarea id="inputDesc" placeholder="E.g. Description / Phone / Address" type="text" name="producerdesc"></textarea>
+                                        <textarea id="inputDesc" rows="5" placeholder="E.g. Description / Phone / Address" type="text" name="producerdesc"></textarea>
                                     </div>
                                 </div>
 

@@ -78,21 +78,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Ahmet</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Mehmet</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Ayşe</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
+                                        <c:forEach items="${producerList}" var="producerList">
+                                            <tr>
+                                                <td><c:out value="${producerList.id}"/></td>
+                                                <td><c:out value="${producerList.producername}"/></td>
+                                                <td><button class="close">&times;</button></td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

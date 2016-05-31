@@ -78,21 +78,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>İlaç gibi üzümler</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Yemyeşil Erikler</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Bahçemizden</td>
-                                            <td><button class="close">&times;</button></td>
-                                        </tr>
+                                        <c:forEach items="${announcementList}" var="announcementList">
+                                            <tr>
+                                                <td><c:out value="${announcementList.id}"/></td>
+                                                <td><c:out value="${announcementList.announcementtitle}"/></td>
+                                                <td><button class="close">&times;</button></td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

@@ -82,7 +82,7 @@
                                     <label class="control-label" for="inputDesc">Announcement Body</label>
 
                                     <div class="controls">
-                                        <textarea id="inputDesc" placeholder="E.g. Description / Date&Time / Place..." type="text" name="announcementbody"></textarea>
+                                        <textarea id="inputDesc" rows="5" placeholder="E.g. Description / Date&Time / Place..." type="text" name="announcementbody"></textarea>
                                     </div>
                                 </div>
 
