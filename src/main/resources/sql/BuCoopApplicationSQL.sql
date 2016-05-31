@@ -110,3 +110,5 @@ CREATE TABLE `category` (
 INSERT INTO userbasic (username,password,type,active) VALUES ('superadmin','super123','superadmin',1);
 
 CREATE VIEW userall AS (SELECT a.id, a.username, a.password, a.type, a.active, a.isapplicant, b.email, b.firstname, b.surname, b.avatar, b.about, c.emailpriv, c.firstnamepriv, c.surnamepriv, c.avatarpriv, c.aboutpriv FROM userbasic a INNER JOIN useradditional b ON a.id=b.id INNER JOIN userprivacy c ON b.id=c.id);
+
+CREATE VIEW productall AS (SELECT a.id, a.productname, a.productdesc, a.active as productactive, b.categoryname, c.producername, c.producerdesc, c.active as produceractive FROM product a INNER JOIN category b ON a.category=b.id INNER JOIN producer c ON a.producer=c.id);
