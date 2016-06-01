@@ -11,10 +11,12 @@ bucoop\model\Userbasic.class
 bucoop\controller\SignupController.class
 bucoop\dto\ProductDto.class
 bucoop\model\Memberrequest.class
+bucoop\model\Productall_.class
 bucoop\model\Userbasic_.class
 bucoop\model\Announcement_.class
 bucoop\model\Inventory.class
 bucoop\dto\InventoryDtoImpl.class
+bucoop\model\Productall.class
 bucoop\model\Tag_.class
 bucoop\model\Useradditional.class
 bucoop\dto\UserprivacyDto.class
@@ -54,8 +56,11 @@ bucoop\dto\TagDto.class
 bucoop\util\ProducerUtilImpl.class
 bucoop\util\ProfileUtil.class
 bucoop\util\SignupUtilImpl.class
+bucoop\model\Userall.class
+bucoop\controller\SearchController.class
 bucoop\dto\UserbasicDtoImpl.class
 bucoop\controller\ProducerController.class
+bucoop\model\Userall_.class
 bucoop\controller\AdminConsoleController.class
 bucoop\dto\CommentrateDtoImpl.class
 bucoop\dto\UseradditionalDtoImpl.class

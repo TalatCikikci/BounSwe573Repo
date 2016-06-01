@@ -10,6 +10,12 @@ public interface ProducerDto {
     
     public Producer getProducerWithId(Integer producerId);
     
+    public List<Producer> getProducerByName(String producername);
+    
+    public List<Producer> getProducerByDescription(String producerdesc);
+    
+    public List<Producer> getProducerByLocation(String location);
+    
     public List<Producer> getProducers();
     
     public List<Producer> getProducerList();

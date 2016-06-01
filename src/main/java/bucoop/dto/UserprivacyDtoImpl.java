@@ -1,6 +1,7 @@
 package bucoop.dto;
 
 import bucoop.model.Userprivacy;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -33,5 +34,17 @@ public class UserprivacyDtoImpl implements UserprivacyDto {
     public void updateUserPrivacy(Userprivacy userPrivacy) {
         entityManager.merge(userPrivacy);
         entityManager.flush();
+    }
+    
+    @Override
+    public List<Userprivacy> getPrivacyUsers() {
+        final List userPrivacyOrdered = entityManager.createQuery("SELECT h FROM Userprivacy h ORDER BY h.id ASC").getResultList();
+        return userPrivacyOrdered;
+    }
+    
+    @Override
+    public List<Userprivacy> getPrivacyUsersList() {
+        final List<Userprivacy> privacyUsersList = getPrivacyUsers();
+        return privacyUsersList;
     }
 }

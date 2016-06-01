@@ -19,4 +19,12 @@ public interface ProfileUtil {
     
     List<Userbasic> getBasicUsersList();
     
+    List<Userbasic> getBasicUsersListByItem(String searchitem);
+    
+    List<Useradditional> getAdditionalUsersList();
+    
+    List<Useradditional> getAdditionalUsersListByItem(String searchitem);
+    
+    List<Userprivacy> getPrivacyUsersList();
+    
 }

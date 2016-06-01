@@ -20,4 +20,6 @@ public interface UserbasicDto {
     public List<Userbasic> getBasicUsers();
     
     public List<Userbasic> getBasicUsersList();
+    
+    public List<Userbasic> getUserbasicByUsername(String username);
 }

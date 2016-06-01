@@ -88,4 +88,12 @@ public class UserbasicDtoImpl implements UserbasicDto {
         final List<Userbasic> basicUsersList = getBasicUsers();
         return basicUsersList;
     }
+    
+    @Override
+    @Transactional
+    public List<Userbasic> getUserbasicByUsername(String username) {
+        final List userbasicWithName = entityManager.createQuery("SELECT h FROM Userbasic h WHERE h.username = :username")
+                .setParameter("username", username).getResultList();
+        return userbasicWithName;
+    }
 }

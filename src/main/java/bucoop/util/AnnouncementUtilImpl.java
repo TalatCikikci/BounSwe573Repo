@@ -21,12 +21,10 @@ public class AnnouncementUtilImpl implements AnnouncementUtil {
         return true;
     }
     
-    
     @Override
     public boolean deleteAnnouncement(Integer announcementID){
         return true;
     }
-    
     
     @Override
     public List<Announcement> getAnnouncementList(){
@@ -34,10 +32,15 @@ public class AnnouncementUtilImpl implements AnnouncementUtil {
         return announcementCollection;
     }
     
-    
     @Override
     public Announcement getAnnouncementById(Integer announcementID) {
         Announcement announcementtitle = announcementDto.getAnnouncementWithId(announcementID);
         return announcementtitle;
+    }
+    
+    @Override
+    public List<Announcement> getAnnouncementListByItem(String searchitem){
+        final List<Announcement> announcementCollection = announcementDto.getAnnouncementList();
+        return announcementCollection;
     }
 }

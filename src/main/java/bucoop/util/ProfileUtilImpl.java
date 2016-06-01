@@ -7,6 +7,7 @@ import bucoop.model.Userprivacy;
 import bucoop.dto.UserprivacyDto;
 import bucoop.dto.UseradditionalDto;
 import bucoop.model.Useradditional;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,7 +65,41 @@ public class ProfileUtilImpl implements ProfileUtil {
     
     @Override
     public List<Userbasic> getBasicUsersList(){
-        final List<Userbasic> categoryCollection = userBasicDto.getBasicUsersList();
-        return categoryCollection;
+        final List<Userbasic> userBasicCollection = userBasicDto.getBasicUsersList();
+        return userBasicCollection;
+    }
+    
+    @Override
+    public List<Userbasic> getBasicUsersListByItem(String searchitem){
+        final List<Userbasic> userBasicCollection = userBasicDto.getUserbasicByUsername(searchitem);
+        return userBasicCollection;
+    }
+    
+    @Override
+    public List<Useradditional> getAdditionalUsersList(){
+        final List<Useradditional> userAdditionalCollection = userAdditionalDto.getAdditionalUsersList();
+        return userAdditionalCollection;
+    }
+    
+    @Override
+    public List<Useradditional> getAdditionalUsersListByItem(String searchitem){
+        final List<Useradditional> userFirstnameCollection = userAdditionalDto.getUseradditionalByFirstname(searchitem);
+        final List<Useradditional> userSurnameCollection = userAdditionalDto.getUseradditionalBySurname(searchitem);
+        final List<Useradditional> userAboutCollection = userAdditionalDto.getUseradditionalByAbout(searchitem);
+        final List<Useradditional> userEmailCollection = userAdditionalDto.getUseradditionalByEmail(searchitem);
+        
+        List<Useradditional> userAdditionalCollection = new ArrayList();
+        userAdditionalCollection.addAll(userFirstnameCollection);
+        userAdditionalCollection.addAll(userSurnameCollection);
+        userAdditionalCollection.addAll(userAboutCollection);
+        userAdditionalCollection.addAll(userEmailCollection);
+        
+        return userAdditionalCollection;
+    }
+    
+    @Override
+    public List<Userprivacy> getPrivacyUsersList(){
+        final List<Userprivacy> userPrivacyCollection = userPrivacyDto.getPrivacyUsersList();
+        return userPrivacyCollection;
     }
 }

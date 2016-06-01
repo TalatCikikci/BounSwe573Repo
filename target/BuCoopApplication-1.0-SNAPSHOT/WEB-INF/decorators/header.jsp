@@ -25,10 +25,10 @@
                             <li><a href="<c:url value="/signup"/>">Sign Up</a></li>
                             <li><a href="<c:url value="/adminconsole"/>">Console</a></li>
                         </ul>
-                        <form class="navbar-form">
+                        <form class="navbar-form" method="post" action="${pageContext.servletContext.contextPath}/search">
                             <div class="form-group" style="display:inline;">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <input type="text" class="form-control" name="searchitem" placeholder="Search...">
                                      <button class="btn">Search</button>
                                  </div>
                             </div>

@@ -13,4 +13,6 @@ public interface ProducerUtil {
     Producer getProducerById(Integer producerID);
     
     List<Producer> getProducerList();
+    
+    List<Producer> getProducerListByItem(String searchitem);
 }

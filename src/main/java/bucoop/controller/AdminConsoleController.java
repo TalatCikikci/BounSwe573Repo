@@ -122,7 +122,9 @@ public class AdminConsoleController {
                                     RedirectAttributes redirectAttributes,
                                     HttpServletRequest httpServletRequest) {
         
-        final boolean productAdded = productUtil.addProduct(productname, productdesc, producer, category);
+        final Boolean isactive = true;
+        
+        final boolean productAdded = productUtil.addProduct(productname, productdesc, producer, category, isactive);
         
         if (!productAdded) {
             final String successMessage = "Product could not be added!";

@@ -41,7 +41,7 @@ CREATE TABLE `producer` (
   `producername` VARCHAR(40) DEFAULT NULL,
   `producerdesc` LONGTEXT,
   `location` VARCHAR(400),
-  `active` BOOLEAN DEFAULT TRUE
+  `active` BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 DROP TABLE IF EXISTS `product`;
@@ -52,7 +52,7 @@ CREATE TABLE `product` (
   `productdesc` LONGTEXT,
   `producer` INT(10) NOT NULL,
   `category` INT(10),
-  `active` BOOLEAN DEFAULT TRUE
+  `active` BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 DROP TABLE IF EXISTS `tag`;

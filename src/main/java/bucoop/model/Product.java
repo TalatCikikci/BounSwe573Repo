@@ -54,6 +54,7 @@ public class Product implements Serializable {
     private int producer;
     @Column(name = "category")
     private Integer category;
+    @NotNull
     @Column(name = "active")
     private Boolean active;
 

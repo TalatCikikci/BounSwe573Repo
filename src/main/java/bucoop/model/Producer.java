@@ -50,6 +50,7 @@ public class Producer implements Serializable {
     @Size(max = 400)
     @Column(name = "location")
     private String location;
+    @NotNull
     @Column(name = "active")
     private Boolean active;
 

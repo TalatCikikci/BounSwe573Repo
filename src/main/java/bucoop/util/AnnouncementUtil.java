@@ -13,4 +13,6 @@ public interface AnnouncementUtil {
     Announcement getAnnouncementById(Integer announcementID);
     
     List<Announcement> getAnnouncementList();
+    
+    List<Announcement> getAnnouncementListByItem(String searchitem);
 }
