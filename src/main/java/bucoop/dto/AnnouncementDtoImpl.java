@@ -43,4 +43,16 @@ public class AnnouncementDtoImpl implements AnnouncementDto{
         final List<Announcement> announcementList = getAnnouncements();
         return announcementList;
     }
+    
+    @Override
+    public List<Announcement> getAnnouncementListByTitle(String announcementTitle) {
+        final List<Announcement> announcementList = entityManager.createQuery("SELECT h FROM Announcement h WHERE h.announcementtitle = :announcementtitle").setParameter("announcementtitle", "%" + announcementTitle + "%").getResultList();
+        return announcementList;
+    }
+    
+    @Override
+    public List<Announcement> getAnnouncementListByBody(String announcementBody) {
+        final List<Announcement> announcementList = entityManager.createQuery("SELECT h FROM Announcement h WHERE h.announcementbody = :announcementbody").setParameter("announcementbody", "%" + announcementBody + "%").getResultList();
+        return announcementList;
+    }
 }

@@ -14,4 +14,7 @@ public interface AnnouncementDto {
     
     public List<Announcement> getAnnouncementList();
     
+    public List<Announcement> getAnnouncementListByTitle(String announcementTitle);
+    
+    public List<Announcement> getAnnouncementListByBody(String announcementBody);    
 }

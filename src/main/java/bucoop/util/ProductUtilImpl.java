@@ -104,4 +104,10 @@ public class ProductUtilImpl implements ProductUtil{
      
         return productAllInfo;
     }
+    
+    @Override
+    public List<Productall> getProductalls(){
+        final List<Productall> productAllCollection = productDto.getProductalls();
+        return productAllCollection;
+    }
 }

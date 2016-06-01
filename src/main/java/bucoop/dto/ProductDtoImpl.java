@@ -53,7 +53,7 @@ public class ProductDtoImpl implements ProductDto{
     
     @Override
     public List<Productall> getProductalls() {
-        final List productallsOrdered = entityManager.createQuery("SELECT h FROM Productall h ORDER BY h.id ASC").getResultList();
+        final List productallsOrdered = entityManager.createQuery("SELECT h FROM Productall h ORDER BY h.id DESC").getResultList();
         return productallsOrdered;
     }
     

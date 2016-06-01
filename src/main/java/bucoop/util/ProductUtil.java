@@ -29,4 +29,6 @@ public interface ProductUtil {
     Productall getAllProductInformation(Integer productId);
     
     List<Productall> getProductInfoByKeyword(String searchitem);
+    
+    List<Productall> getProductalls();
 }
