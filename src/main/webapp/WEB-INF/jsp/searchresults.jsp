@@ -25,7 +25,7 @@
                             <tbody>
                                 <c:forEach items="${productList}" var="productList">
                                     <tr>
-                                        <td><c:out value="${productList.productname}"/></td>
+                                        <td><a href="/product/<c:out value="${productList.id}"/>"><c:out value="${productList.productname}"/></a></td>
                                         <td><c:out value="${productList.categoryname}"/></td>
                                         <td><c:out value="${productList.producername}"/></td>
                                     </tr>
@@ -49,7 +49,7 @@
                             <tbody>
                                 <c:forEach items="${producerList}" var="producerList">
                                     <tr>
-                                        <td><c:out value="${producerList.producername}"/></td>
+                                        <td><a href="/producer/<c:out value="${producerList.id}"/>"><c:out value="${producerList.producername}"/></a></td>
                                     </tr>
                                 </c:forEach>
                             </tbody>
