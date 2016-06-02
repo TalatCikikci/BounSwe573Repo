@@ -15,10 +15,11 @@ public class ProducerUtilImpl implements ProducerUtil{
     private ProducerDto producerDto;
     
     @Override
-    public boolean addProducer(String producername, String producerdesc, String location){
+    public boolean addProducer(String producername, String producerdesc, String location, Boolean isactive){
         final Producer producer = new Producer();
         producer.setProducername(producername);
         producer.setProducerdesc(producerdesc);
+        producer.setActive(isactive);
         producerDto.persistProducer(producer);
         return true;
     }

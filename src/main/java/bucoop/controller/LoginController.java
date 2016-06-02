@@ -32,11 +32,22 @@ public class LoginController {
                         RedirectAttributes redirectAttributes,
                         HttpServletRequest httpServletRequest) {
 
-        final boolean loginSuccessful
-                = loginUtil.logIn(username, password);
+        if (username.isEmpty()) {
+            final String successMessage = "Username cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/login";
+        }
+        
+        if (password.isEmpty()) {
+            final String successMessage = "Password cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/login";
+        }
+        
+        final boolean loginSuccessful = loginUtil.logIn(username, password);
 
         if (!loginSuccessful) {
-            final String successMessage = "Login failed!";
+            final String successMessage = "Username - password combination not found. Either the user does not exist or the password is incorrect.";
             redirectAttributes.addFlashAttribute("successMessage", successMessage);
             return "redirect:/login";
         }

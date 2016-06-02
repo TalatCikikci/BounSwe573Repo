@@ -21,6 +21,7 @@ public class ProductDtoImpl implements ProductDto{
     }
     
     @Override
+    @Transactional
     public Product getProductWithId(Integer productId) {
         final Product product = entityManager.find(Product.class, productId);
         if (product == null) {
@@ -30,6 +31,7 @@ public class ProductDtoImpl implements ProductDto{
     }
     
     @Override
+    @Transactional
     public List<Product> getProducts() {
         final List productsOrdered = entityManager.createQuery("SELECT h FROM Product h ORDER BY h.id ASC").getResultList();
         return productsOrdered;
@@ -42,6 +44,7 @@ public class ProductDtoImpl implements ProductDto{
     }
     
     @Override
+    @Transactional
     public Productall getAllProductInfo(Integer productId){
         final Productall productAll = entityManager.find(Productall.class, productId);
         if (productAll == null){
@@ -52,6 +55,7 @@ public class ProductDtoImpl implements ProductDto{
     }
     
     @Override
+    @Transactional
     public List<Productall> getProductalls() {
         final List productallsOrdered = entityManager.createQuery("SELECT h FROM Productall h ORDER BY h.id DESC").getResultList();
         return productallsOrdered;

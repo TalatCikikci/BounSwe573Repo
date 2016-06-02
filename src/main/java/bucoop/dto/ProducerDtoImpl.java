@@ -20,6 +20,7 @@ public class ProducerDtoImpl implements ProducerDto{
     }
     
     @Override
+    @Transactional
     public Producer getProducerWithId(Integer producerId) {
         final Producer producer = entityManager.find(Producer.class, producerId);
         if (producer == null) {
@@ -29,6 +30,7 @@ public class ProducerDtoImpl implements ProducerDto{
     }
     
     @Override
+    @Transactional
     public List<Producer> getProducers() {
         final List producersOrdered = entityManager.createQuery("SELECT h FROM Producer h ORDER BY h.id ASC").getResultList();
         return producersOrdered;

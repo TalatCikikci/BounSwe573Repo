@@ -21,6 +21,7 @@ public class UserprivacyDtoImpl implements UserprivacyDto {
     }
     
     @Override
+    @Transactional
     public Userprivacy getUserPrivacyWithId(Integer userId) {
         final Userprivacy userPrivacy = entityManager.find(Userprivacy.class, userId);
         if (userPrivacy == null) {
@@ -37,6 +38,7 @@ public class UserprivacyDtoImpl implements UserprivacyDto {
     }
     
     @Override
+    @Transactional
     public List<Userprivacy> getPrivacyUsers() {
         final List userPrivacyOrdered = entityManager.createQuery("SELECT h FROM Userprivacy h ORDER BY h.id ASC").getResultList();
         return userPrivacyOrdered;

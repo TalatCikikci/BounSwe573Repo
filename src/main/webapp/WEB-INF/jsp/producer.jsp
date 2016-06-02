@@ -1,10 +1,5 @@
-<%-- 
-    Document   : producer
-    Created on : May 6, 2016, 7:06:15 PM
-    Author     : z003j14c
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +7,28 @@
         <title>BuCoop - Producer</title>
     </head>
     <body>
-        <h1>Hello World! producer.jsp</h1>
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <c:if test="${producerPage.active}">                
+                    <div class="page-header">
+                        <h1 class="form-heading"><c:out value="${producerPage.producername}"/></h1>
+                    </div>
+                    <div class="span9 container">
+                        <h3>Description</h3>
+                        <div class="well container-fluid">
+                            <div class="container-fluid">
+                            <c:out value="${producerPage.producerdesc}"/>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="span6 pull-left">
+                                    Location: <c:out value="${producerPage.location}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </div>
+        </div>
     </body>
 </html>
+

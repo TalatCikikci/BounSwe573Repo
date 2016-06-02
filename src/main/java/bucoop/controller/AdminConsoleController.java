@@ -124,6 +124,30 @@ public class AdminConsoleController {
         
         final Boolean isactive = true;
         
+        if (productname.isEmpty()) {
+            final String successMessage = "Product name cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproduct";
+        }
+        
+        if (productdesc.isEmpty()) {
+            final String successMessage = "Product description cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproduct";
+        }
+        
+        if (producer == null) {
+            final String successMessage = "Producer cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproduct";
+        }
+        
+        if (category == null) {
+            final String successMessage = "Category cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproduct";
+        }
+        
         final boolean productAdded = productUtil.addProduct(productname, productdesc, producer, category, isactive);
         
         if (!productAdded) {
@@ -142,6 +166,12 @@ public class AdminConsoleController {
                                     Model model,
                                     RedirectAttributes redirectAttributes,
                                     HttpServletRequest httpServletRequest) {
+        
+        if (categoryname.isEmpty()) {
+            final String successMessage = "Category name cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addcategory";
+        }
         
         final boolean categoryAdded = productUtil.addCategory(categoryname);
         
@@ -165,7 +195,27 @@ public class AdminConsoleController {
                                     RedirectAttributes redirectAttributes,
                                     HttpServletRequest httpServletRequest) {
         
-        final boolean producerAdded = producerUtil.addProducer(producername, producerdesc, location);
+        final Boolean isactive = true;
+        
+        if (producername.isEmpty()) {
+            final String successMessage = "Producer name cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproducer";
+        }
+        
+        if (producerdesc.isEmpty()) {
+            final String successMessage = "Producer description cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproducer";
+        }
+        
+        if (location.isEmpty()) {
+            final String successMessage = "Producer location cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addproducer";
+        }
+        
+        final boolean producerAdded = producerUtil.addProducer(producername, producerdesc, location, isactive);
         
         if (!producerAdded) {
             final String successMessage = "Producer could not be added!";
@@ -185,6 +235,18 @@ public class AdminConsoleController {
                                     Model model,
                                     RedirectAttributes redirectAttributes,
                                     HttpServletRequest httpServletRequest) {
+        
+        if (announcementtitle.isEmpty()) {
+            final String successMessage = "Announcement title cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addannouncement";
+        }
+        
+        if (announcementbody.isEmpty()) {
+            final String successMessage = "Announcement body cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/addannouncement";
+        }
         
         final boolean announcementAdded = announcementUtil.addAnnouncement(announcementtitle, announcementbody);
         

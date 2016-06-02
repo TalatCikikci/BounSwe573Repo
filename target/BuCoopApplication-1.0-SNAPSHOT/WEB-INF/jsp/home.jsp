@@ -19,15 +19,15 @@
 
                                         <div class="well container-fluid">
                                             <div class="container-fluid">
-                                            <h4><c:out value="${productList.productname}"/></h4>
+                                                <h4><a href="<c:out value="/product/${productList.id}"/>"><c:out value="${productList.productname}"/></a></h4>
                                             <c:out value="${productList.productdesc}"/>
                                             </div>
                                             <div class="container-fluid">
                                                 <div class="span6 pull-left">
-                                                    Category: <c:out value="${productList.categoryname}"/>
+                                                    Category: <a href="/product/<c:out value="${productList.categoryid}"/>"><c:out value="${productList.categoryname}"/></a>
                                                 </div>
                                                 <div class="span6 pull-right">
-                                                    Producer: <c:if test="${producerList.produceractive}"><c:out value="${productList.producername}"/></c:if>
+                                                    Producer: <c:if test="${productList.produceractive}"><a href="/producer/<c:out value="${productList.producerid}"/>"><c:out value="${productList.producername}"/></a></c:if>
                                                 </div>
                                             </div>
                                         </div>

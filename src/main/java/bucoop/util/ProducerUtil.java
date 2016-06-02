@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProducerUtil {
     
-    boolean addProducer(String producername, String producerdesc, String location);
+    boolean addProducer(String producername, String producerdesc, String location, Boolean isactive);
     
     boolean deleteProducer(Integer producerID);
     

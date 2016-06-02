@@ -45,7 +45,7 @@
                                     <label class="control-label" for="inputPassword2">Confirm Password</label>
 
                                     <div class="controls">
-                                        <input id="inputPassword2" placeholder="Same as password" type="password">
+                                        <input id="inputPassword2" placeholder="Same as password" type="password" name="passwordvalidation">
                                     </div>
                                 </div>
 

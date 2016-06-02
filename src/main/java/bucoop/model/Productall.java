@@ -34,6 +34,14 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Productall.findByProducername", query = "SELECT p FROM Productall p WHERE p.producername = :producername"),
     @NamedQuery(name = "Productall.findByProduceractive", query = "SELECT p FROM Productall p WHERE p.produceractive = :produceractive")})
 public class Productall implements Serializable {
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "categoryid")
+    private int categoryid;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "producerid")
+    private int producerid;
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -131,6 +139,22 @@ public class Productall implements Serializable {
 
     public void setProduceractive(boolean produceractive) {
         this.produceractive = produceractive;
+    }
+
+    public int getCategoryid() {
+        return categoryid;
+    }
+
+    public void setCategoryid(int categoryid) {
+        this.categoryid = categoryid;
+    }
+
+    public int getProducerid() {
+        return producerid;
+    }
+
+    public void setProducerid(int producerid) {
+        this.producerid = producerid;
     }
     
 }

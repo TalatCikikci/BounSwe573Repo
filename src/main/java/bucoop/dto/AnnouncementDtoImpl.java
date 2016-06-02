@@ -22,6 +22,7 @@ public class AnnouncementDtoImpl implements AnnouncementDto{
     
     
     @Override
+    @Transactional
     public Announcement getAnnouncementWithId(Integer announcementId) {
         final Announcement announcement = entityManager.find(Announcement.class, announcementId);
         if (announcement == null) {
@@ -32,6 +33,7 @@ public class AnnouncementDtoImpl implements AnnouncementDto{
     
     
     @Override
+    @Transactional
     public List<Announcement> getAnnouncements() {
         final List announcementsOrdered = entityManager.createQuery("SELECT h FROM Announcement h ORDER BY h.id ASC").getResultList();
         return announcementsOrdered;
@@ -45,12 +47,14 @@ public class AnnouncementDtoImpl implements AnnouncementDto{
     }
     
     @Override
+    @Transactional
     public List<Announcement> getAnnouncementListByTitle(String announcementTitle) {
         final List<Announcement> announcementList = entityManager.createQuery("SELECT h FROM Announcement h WHERE h.announcementtitle = :announcementtitle").setParameter("announcementtitle", "%" + announcementTitle + "%").getResultList();
         return announcementList;
     }
     
     @Override
+    @Transactional
     public List<Announcement> getAnnouncementListByBody(String announcementBody) {
         final List<Announcement> announcementList = entityManager.createQuery("SELECT h FROM Announcement h WHERE h.announcementbody = :announcementbody").setParameter("announcementbody", "%" + announcementBody + "%").getResultList();
         return announcementList;

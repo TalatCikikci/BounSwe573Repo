@@ -32,9 +32,41 @@ public class SignupController {
     public String signUp(@RequestParam String username,
                          @RequestParam String email,
                          @RequestParam String password,
+                         @RequestParam String passwordvalidation,
                          Model model,
                          RedirectAttributes redirectAttributes,
                          HttpServletRequest httpServletRequest) {
+        
+        if (username.isEmpty()) {
+            final String successMessage = "User name cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/signup";
+        }
+        
+        if (email.isEmpty()) {
+            final String successMessage = "Email cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/signup";
+        }
+        
+        if (password == null) {
+            final String successMessage = "Password cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/signup";
+        }
+        
+        if (passwordvalidation == null) {
+            final String successMessage = "Password verification cannot be empty!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/signup";
+        }
+        
+        if (!passwordvalidation.equals(password)) {
+            final String successMessage = "Password and password verification fields do not match!";
+            redirectAttributes.addFlashAttribute("successMessage", successMessage);
+            return "redirect:/signup";
+        }
+        
         final boolean signUpAllowed
                 = signupUtil.checkSignUpAllowed(username, password);
 

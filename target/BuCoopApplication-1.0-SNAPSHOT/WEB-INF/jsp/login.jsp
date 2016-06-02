@@ -20,7 +20,7 @@
                                     <label class="control-label" for="inputUsername">Username</label>
 
                                     <div class="controls">
-                                        <input id="inputUsername" placeholder="E.g. johndoe@domain.com" type="text" name="username">
+                                        <input id="inputUsername" placeholder="E.g. johndoe@domain.com" type="text" name="username" value="">
                                     </div>
                                 </div>
 
@@ -28,7 +28,7 @@
                                     <label class="control-label" for="inputPassword">Password</label>
 
                                     <div class="controls">
-                                        <input id="inputPassword" placeholder="********" type="password" name="password">
+                                        <input id="inputPassword" placeholder="********" type="password" name="password" value="">
                                     </div>
                                 </div>
 

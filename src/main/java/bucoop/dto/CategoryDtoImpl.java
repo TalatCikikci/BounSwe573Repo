@@ -20,6 +20,7 @@ public class CategoryDtoImpl implements CategoryDto{
     }
     
     @Override
+    @Transactional
     public Category getCategoryWithId(Integer categoryId) {
         final Category category = entityManager.find(Category.class, categoryId);
         if (category == null) {
@@ -29,6 +30,7 @@ public class CategoryDtoImpl implements CategoryDto{
     }
     
     @Override
+    @Transactional
     public List<Category> getCategories() {
         final List categoriesOrdered = entityManager.createQuery("SELECT h FROM Category h ORDER BY h.id ASC").getResultList();
         return categoriesOrdered;

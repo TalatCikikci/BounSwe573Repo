@@ -20,6 +20,7 @@ public class UseradditionalDtoImpl implements UseradditionalDto {
     }
     
     @Override
+    @Transactional
     public Useradditional getUserAdditionalWithId(Integer userId) {
         final Useradditional userAdditional = entityManager.find(Useradditional.class, userId);
         if (userAdditional == null) {
@@ -36,6 +37,7 @@ public class UseradditionalDtoImpl implements UseradditionalDto {
     }
     
     @Override
+    @Transactional
     public List<Useradditional> getAdditionalUsers() {
         final List userAdditionalOrdered = entityManager.createQuery("SELECT h FROM Useradditional h ORDER BY h.id ASC").getResultList();
         return userAdditionalOrdered;

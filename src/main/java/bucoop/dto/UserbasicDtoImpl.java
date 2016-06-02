@@ -23,22 +23,23 @@ public class UserbasicDtoImpl implements UserbasicDto {
     }
 
     @Override
+    @Transactional
     public boolean userExistsWithName(String username, String password) {
-        Userbasic userBasic = new Userbasic();
-        userBasic.setUsername(username);
-        userBasic.setPassword(password);
-        Userbasic persistedAppUser = (Userbasic) entityManager.createQuery("SELECT a FROM Userbasic a WHERE a.username = :username AND a.password = :password")
+//        Userbasic userBasic = new Userbasic();
+//        userBasic.setUsername(username);
+//        userBasic.setPassword(password);
+        List<Userbasic> persistedUser = entityManager.createQuery("SELECT a FROM Userbasic a WHERE a.username = :username AND a.password = :password")
                 .setParameter("username", username)
                 .setParameter("password", password)
-                .setMaxResults(1)
-                .getSingleResult();
-        if (persistedAppUser == null) {
+                .getResultList();
+        if (persistedUser.isEmpty()) {
             return false;
         }
         return true;
     }
 
     @Override
+    @Transactional
     public Userbasic getAppUserWithName(String username) {
         Userbasic userBasic = new Userbasic();
         userBasic.setUsername(username);
@@ -53,6 +54,7 @@ public class UserbasicDtoImpl implements UserbasicDto {
     }
 
     @Override
+    @Transactional
     public Userbasic getAppUserWithId(Integer userId) {
         final Userbasic userBasic = entityManager.find(Userbasic.class, userId);
         if (userBasic == null) {
@@ -78,6 +80,7 @@ public class UserbasicDtoImpl implements UserbasicDto {
     }
     
     @Override
+    @Transactional
     public List<Userbasic> getBasicUsers() {
         final List userBasicOrdered = entityManager.createQuery("SELECT h FROM Userbasic h ORDER BY h.id ASC").getResultList();
         return userBasicOrdered;
